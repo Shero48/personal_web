@@ -1,103 +1,54 @@
-import Image from "next/image";
+"use client";
+import { ImHtmlFive2 } from "react-icons/im";
+import { FaJsSquare } from "react-icons/fa";
+import { FaNodeJs } from "react-icons/fa";
+import { SiMongodb } from "react-icons/si";
+import { FaReact } from "react-icons/fa";
+import { TbBrandCss3 } from "react-icons/tb";
+import { RiNextjsFill } from "react-icons/ri";
+import { RiTailwindCssFill } from "react-icons/ri";
+import Link from 'next/link'
+import { useEffect } from "react";
+import Aos from "aos";
+import 'aos/dist/aos.css';
+import { useSelector,useDispatch } from 'react-redux';
+import { change_nav,change_btn } from '@/store/slice';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const dispatch=useDispatch()
+  useEffect(() => {
+    Aos.init({
+      duration: 1000, // Duration for animation (optional)
+    });
+  }, []);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return (
+      <div id="home" className="w-full relative h-[90vh] flex items-center justify-center">
+        {/* icons */}
+        <div className="w-10 icon h-10 animate-ping max-md:top-40 max-md:left-20 absolute top-44 left-44 grid rounded-md text-3xl text-primary place-items-center bg-effect drop-shadow-md"><ImHtmlFive2/></div>
+        <div className="w-10 icon h-10 animate-bounce absolute max-md:top-30 max-md:right-20 top-50 right-50 grid rounded-md text-3xl text-primary place-items-center bg-effect drop-shadow-md"><TbBrandCss3/></div>
+        <div className="w-10 icon h-10 animate-bounce max-md:bottom-40 max-md:left-20 absolute bottom-44 left-44 grid rounded-md text-3xl text-primary place-items-center bg-effect drop-shadow-md"><FaReact/></div>
+        <div className="w-10 icon h-10 animate-ping max-md:bottom-45 max-md:right-20  absolute bottom-44 right-44 grid rounded-md text-3xl text-primary place-items-center bg-effect drop-shadow-md"><FaJsSquare/></div>
+        <div className="w-10 icon h-10 animate-bounce max-md:top-50 max-md:right-60 absolute top-70 left-70 grid rounded-md text-3xl text-primary place-items-center bg-effect drop-shadow-md"><FaNodeJs/></div>
+        <div className="w-10 icon h-10 animate-ping max-md:top-70 max-md:left-40 absolute top-70 right-70 grid rounded-md text-3xl text-primary place-items-center bg-effect drop-shadow-md"><RiNextjsFill/></div>
+        <div className="w-10 icon h-10 absolute animate-bounce max-md:top-80 max-md:left-10 top-30 left-150 grid rounded-md text-3xl text-primary place-items-center bg-effect drop-shadow-md"><SiMongodb/></div>
+        <div className="w-10 icon h-10 absolute animate-ping max-md:bottom-60 max-md:right-30 bottom-30 right-150 grid rounded-md text-3xl text-primary place-items-center bg-effect drop-shadow-md"><RiTailwindCssFill/></div>
+        <div className="absolute top-2  animate-pulse left-4 text-[100px] font-[1000]  font-back text-base tracking-[2px]">MERN</div>
+        <div className='flex flex-col z-2 items-center justify-center text-center mb-4'>
+          <span className="text-con">Hi ther, I am</span>
+          <span className="text-[80px] text-white font-[900] text-nowrap max-md:text-[60px] text-border font-style leading-[1.5]" data-aos="zoom-in-up">Sunil Kumar</span>
+          <div className="text-head  inline-block text-nowrap animate-text-bling overflow-hidden px-2 border-r-4 border-text font-[500] animation-delay-500 text-text">Full Stack Developer</div>
+          <div className="mt-2 flex flex-row gap-2">
+            <button className="cursor-pointer bg-effect text-primary px-4 py-2 text-md mt-6 border-2 border-primary transition-all duration-700 hover:bg-primary hover:text-effect focus:text-effect fond-semibold rounded-md" onClick={()=>dispatch(change_nav('contact'))}><Link href='/contact'>Hire Me!</Link></button>
+            <button className='bg-primary transition-all duration-700 delay-300 px-4 py-2 mt-6 text-effect text-con hover:text-primary hover:bg-transparent cursor-pointer hover:rounded-md border-primary hover:border-2'><a>Download CV</a></button>
+          </div>
+            <p onClick={()=>dispatch(change_nav('about'))} className="w-1/2 text-con max-md:hidden mt-4 cursor-pointer txet-left">
+            <Link href='/about'>
+              Hi, I'm S.SunilKumar, a passionate Full Stack Developer with a love for building modern, responsive, and scalable web applications....
+            </Link>
+            </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="absolute bottom-6 left-10 text-[100px] font-[1000] max-md:float-right font-back text-base tracking-[2px]">SUNIL</div>
+      </div>
   );
 }

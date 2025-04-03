@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Caprasimo&family=Caveat&family=Concert+One&family=Madimi+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Playwrite+IN&family=Quicksand:wght@300..700&family=Rubik+Vinyl&family=Rubik+Wet+Paint&family=Varela+Round&display=swap');
 @import "tailwindcss";
-
+/* 
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -23,4 +24,51 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+} */
+@theme {
+  --color-primary:#16423C; 
+  --color-text:#C4DAD2;
+  --color-effect:#E9EFEC;
+  --color-base:#6A9C89;
+  --font-style:"Madimi One", sans-serif;
+  --font-another: "Quicksand", sans-serif;
+  --font-back:"Francois One", sans-serif;
+  --text-head:30px;
+  --text-con:20px;
+  --text-mob-head:25px;
+  --tracking-1:3px;
+  --animate-text-bling: effect 4s steps(20) infinite;
+  @keyframes effect{
+    0%{
+      width: 0%;
+      padding:0;
+      border-right:4px solid #C4DAD2;
+    }
+    25%{
+      width: 25%;
+      border-right:4px solid black;
+    }
+    50%{
+      width: 50%;
+      border-right:4px solid #C4DAD2;
+    }
+    75%{
+      width: 75%;
+      border-right:4px solid transparent;
+    }
+    100%{
+      border-right:4px solid #C4DAD2;
+    }
+  }
+}
+@layer utilities {
+  .text-border {
+    -webkit-text-stroke: 2px #16423C;
+  }
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
 }
