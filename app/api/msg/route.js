@@ -9,8 +9,8 @@ export async function POST(req) {
             port: 465,
             secure:true, // true for port 465, false for other ports
             auth: {
-            user: "sunils42212@gmail.com",
-            pass: "kcpa erdm gopp qkwg",
+            user:process.env.id,
+            pass:process.env.pass,
             },
         })
         const {f_name,l_name,sub,contact,email,msg}=await req.json();
