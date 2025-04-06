@@ -14,7 +14,7 @@ const project = () => {
       console.log("load :",load,"err :",err,"post :",user,pro)
     },[dispatch])
     return (
-      <div id='project' className={`w-full h-[90vh] bg-[url(@/public/pro_bann.png)] bg-cover flex flex-col items-center`}>
+      <div id='project' className={`w-full h-[90vh] bg-[url(../public/pro_bann.png)] bg-cover flex flex-col items-center`}>
         {load?<div className='w-full h-full grid place-items-center'><div className='w-10 h-10 rounded-full border-x-4 border-primary animate-spin'></div></div>:''}
            {user.lenght!=0&&!load &&pro<=6?
          <div className='w-full h-7/10 flex my-4 flex-row items-center px-6 max-md:px-2 justify-between'>
