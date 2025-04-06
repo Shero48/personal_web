@@ -1,7 +1,7 @@
 "use client";
-import React from 'react'
-import Header from "@/component/header";
-import Footer from "@/component/footer";
+import React,{lazy} from 'react'
+const Header =lazy(() => import("@/component/header"));
+const Footer =lazy(() => import("@/component/footer"))
 import { Provider } from "react-redux";
 import {store}from "@/store/store";
 

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from 'react';
+import React, { useEffect} from 'react';
 import { useSelector,useDispatch } from 'react-redux';
 import {getsingle} from '@/store/slice';
 
@@ -18,7 +18,7 @@ const particular =({id}) => {
         <h1 className='text-head max-md:text-mob-head max-md:pl-2 font-bold bg-effect  text-base pl-4'>Project Tittle : <b className='text-primary'>{single.tittle}</b></h1>
         <div className='w-full flex idden flex-row max-md:gap-4 max-md:flex-col max-md:items-center justify-center'>
           <div className='w-1/2 max-md:w-full max-md:px-2  pr-4'> 
-            <img className='w-full h-full' src={single.image}/>
+            <img loading='lazy' className='w-full h-full' src={single.image}/>
           </div>
           <div className='w-1/2 max-md:w-full bg-effect overflow-y-scroll scrollbar-none px-4 py-2'>
           <p className='text-con text-wrap max-md:w-full w-8/9 mt-4 leading-6 text-primary first-letter:pl-4 first-letter:font-bold first-letter:uppercase'>

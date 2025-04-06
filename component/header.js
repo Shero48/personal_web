@@ -23,7 +23,7 @@ const header = () => {
         <div className='text-head font-bold tracking-1 text-text first-letter:bg-effect first-letter:pl-4 first-letter:text-primary first-letter:text-[33px] font-style'>Sunil</div>
       </div>
       <ul className='flex flex-row item-center max-md:hidden justify-between mr-16 gap-4'>
-        <li onClick={()=>dispatch(change_nav('home'))} className={`cursor-pointer duration-300 border-effect hover:font-bold hover:text-white ${nav.menu=='home'?'border-b-2 text-white font-bold ':'text-text '}`}><Link href='/'>Home</Link></li>
+        <li  onClick={()=>dispatch(change_nav('home'))} className={`cursor-pointer duration-300 border-effect hover:font-bold hover:text-white ${nav.menu=='home'?'border-b-2 text-white font-bold ':'text-text '}`}><Link href='/'>Home</Link></li>
         <li onClick={()=>dispatch(change_nav('about'))} className={`cursor-pointer duration-300 border-effect hover:font-bold hover:text-white ${nav.menu=='about'?'border-b-2 text-white font-bold':'text-text '}`}><Link href='/about'>About</Link></li>
         <li onClick={()=>dispatch(change_nav('project'))} className={`cursor-pointer duration-300 border-effect hover:font-bold hover:text-white ${nav.menu=='project'?'border-b-2 text-white font-bold':'text-text '}`}><Link href='/project'>Project</Link></li>
         <li onClick={()=>dispatch(change_nav('contact'))} className={`cursor-pointer duration-300 border-effect hover:font-bold hover:text-white ${nav.menu=='contact'?'border-b-2 text-white font-bold':'text-text '}`}><Link href='/contact'>Contact</Link></li>
