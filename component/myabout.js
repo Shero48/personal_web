@@ -64,7 +64,7 @@ const myabout = () => {
                     <li className='mr-2'><a href='mailto:sunils42212@gmil.com'>sunils42212@gmil.com</a></li>
                 </ul>
               </div>
-              <button className='bg-primary transition-all duration-700 delay-300 px-4 py-2 mt-6 text-effect text-con hover:text-primary hover:bg-transparent cursor-pointer hover:rounded-md border-primary hover:border-2'><a>Download CV</a></button>
+              <button className='bg-primary transition-all duration-700 delay-300 px-4 py-2 mt-6 text-effect text-con hover:text-primary hover:bg-transparent cursor-pointer hover:rounded-md border-primary hover:border-2'><a href='../public/Sunil.pdf' download="Sunil_Resume">Download CV</a></button>
             </div>
         </div>
         </div>
