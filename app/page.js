@@ -37,7 +37,7 @@ export default function Home() {
         <div className='flex flex-col z-2 items-center justify-center text-center mb-4'>
           <span className="text-con">Hi ther, I am</span>
           <span className="text-[80px] text-white font-[900] text-nowrap max-md:text-[60px] text-border font-style leading-[1.5]" data-aos="zoom-in-up">Sunil Kumar</span>
-          <div className="text-head  inline-block text-nowrap animate-text-bling overflow-hidden px-2 border-r-4 border-text font-[500] animation-delay-500 text-text">Full Stack Developer</div>
+          <div className="text-head  inline-block text-nowrap max-md:animate-text-bling-mobile animate-text-bling overflow-hidden whitespace-nowrap px-2 border-r-4 border-text font-[500] animation-delay-500 text-text">Full Stack Developer</div>
           <div className="mt-2 flex flex-row gap-2">
             <button className="cursor-pointer bg-effect text-primary px-4 py-2 text-md mt-6 border-2 border-primary transition-all duration-700 hover:bg-primary hover:text-effect focus:text-effect fond-semibold rounded-md" onClick={()=>dispatch(change_nav('contact'))}><Link href='/contact'>Hire Me!</Link></button>
             <button className='bg-primary transition-all duration-700 delay-300 px-4 py-2 mt-6 text-effect text-con hover:text-primary hover:bg-transparent cursor-pointer hover:rounded-md border-primary hover:border-2'><a href='/Sunil.pdf' download="Sunil_Resume">Download CV</a></button>

@@ -38,7 +38,30 @@ body {
   --text-mob-head:25px;
   --tracking-1:3px;
   --animate-text-bling: effect 4s steps(20) infinite;
+  --animate-text-bling-mobile: effect-mobile 4s steps(20) infinite;
   @keyframes effect{
+    0%{
+      width: 0%;
+      padding:0;
+      border-right:4px solid #C4DAD2;
+    }
+    25%{
+      width: 15%;
+      border-right:4px solid black;
+    }
+    50%{
+      width: 20%;
+      border-right:4px solid #C4DAD2;
+    }
+    75%{
+      width:30%;
+      border-right:4px solid transparent;
+    }
+    100%{
+      border-right:4px solid #C4DAD2;
+    }
+  }
+  @keyframes effect-mobile{
     0%{
       width: 0%;
       padding:0;
@@ -53,10 +76,11 @@ body {
       border-right:4px solid #C4DAD2;
     }
     75%{
-      width: 75%;
+      width:75%;
       border-right:4px solid transparent;
     }
     100%{
+      width:100%;
       border-right:4px solid #C4DAD2;
     }
   }
