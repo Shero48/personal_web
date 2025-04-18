@@ -11,7 +11,6 @@ const project = () => {
     const dispatch=useDispatch();
     useEffect(()=>{
       dispatch(getpost());
-      console.log("load :",load,"err :",err,"post :",user,pro)
     },[dispatch])
     return (
       <div id='project' className={`w-full h-[90vh] bg-[url(../public/pro_bann.png)] bg-cover flex flex-col items-center`}>
@@ -20,7 +19,7 @@ const project = () => {
          <div className='w-full h-7/10 flex my-4 flex-row items-center px-6 max-md:px-2 justify-between'>
             <div onClick={()=>dispatch(decrement())} className='text-[50px] ml-6 max-md:ml-2 cursor-pointer'><MdKeyboardArrowLeft/></div>
               <div data-aos="flip-up" className='w-1/2 max-md:w-full h-full max-md:h-1/2  border-2 border-red-400 relative'>
-              <img loading='lazy' className='w-full h-full cursor-pointer' src={user[pro].image??''}/>
+              <Link href={`/project/${user[pro]._id}`}><img loading='lazy' className='w-full h-full cursor-pointer' src={user[pro].image??''}/></Link>
               <div className='my-4 px-4 py-2'>
                <h1 className='text-head mb-2 font-bold'>{user[pro].tittle}</h1>
                <p className='text-[15px] first-letter:pl-4 font-semibold'>

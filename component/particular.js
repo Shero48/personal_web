@@ -4,12 +4,10 @@ import { useSelector,useDispatch } from 'react-redux';
 import {getsingle} from '@/store/slice';
 
 const particular =({id}) => {
-    console.log(id)
     const {single,single_err,single_load}=useSelector((state)=> state.new);
     const dispatch=useDispatch();
     useEffect(()=>{
       dispatch(getsingle(id))
-      console.log("user : ",single,"load : ",single_load,"error : ",single_err,process.env.NEXT_PUBLIC_url,'/',id)
     },[])
     return (
       <div className={`w-full h-auto flex max-md:px-2 ${!single_load?'bg-primary':'bg-effect'} flex-col px-4 py-2 gap-2`}>

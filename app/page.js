@@ -16,6 +16,7 @@ import { change_nav,change_btn } from '@/store/slice';
 
 export default function Home() {
   const dispatch=useDispatch()
+  const {menu}=useSelector(state=>state.new);
   useEffect(() => {
     Aos.init({
       duration: 1000, // Duration for animation (optional)

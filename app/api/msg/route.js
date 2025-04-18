@@ -1,6 +1,7 @@
 import { connectdb } from "@/util/connectdb";
 import { user_model } from "@/model/usermodel";
 import nodemailer from 'nodemailer'
+import { Sendmail } from "@/util/personal";
 
 export async function POST(req) {
     try{
@@ -14,8 +15,15 @@ export async function POST(req) {
             },
         })
         const {f_name,l_name,sub,contact,email,msg}=await req.json();
-        console.log(f_name,l_name,sub,contact,email,msg)
         connectdb()
+        let data={
+            f_name:f_name,
+            l_name:l_name,
+            email:email,
+            sub:sub,
+            msg:msg,
+            contact:contact
+        }
         const res=await user_model.insertOne({
             f_name:f_name,
             l_name:l_name,
@@ -30,7 +38,10 @@ export async function POST(req) {
             subject:`Hello ${f_name}_${l_name}`,
             html:"<h1>Thanks for your message</h1><br/><p>quickly reply soon ...</p>"
         })
-        console.log(detail);
+        console.log(detail)
+        if(detail.accepted){
+            Sendmail(transport,data);
+        }
         return Response.json(res);
     }catch(err){
         console.log(err)
