@@ -19,7 +19,7 @@ const header = () => {
   return (
     <div className='w-full h-20 bg-primary sticky top-0 z-40 flex flex-row items-center justify-between px-4 py-2'>
       <div className='ml-10 max-md:ml-4'>
-        <div className='text-head font-bold tracking-1 text-text first-letter:bg-effect first-letter:pl-4 first-letter:text-primary first-letter:text-[33px] font-style'><Link href='/'>Sunil</Link></div>
+        <div  onClick={()=>dispatch(change_nav('home'))}  className='text-head font-bold tracking-1 text-text first-letter:bg-effect first-letter:pl-4 first-letter:text-primary first-letter:text-[33px] font-style'><Link href='/'>Sunil</Link></div>
       </div>
       <ul className='flex flex-row item-center max-md:hidden justify-between mr-16 gap-4'>
         <li  onClick={()=>dispatch(change_nav('home'))} className={`cursor-pointer duration-300 border-effect hover:font-bold hover:text-white ${nav.menu=='home'?'border-b-2 text-white font-bold ':'text-text '}`}><Link href='/'>Home</Link></li>
